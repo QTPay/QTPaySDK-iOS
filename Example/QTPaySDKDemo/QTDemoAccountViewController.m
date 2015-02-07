@@ -34,7 +34,7 @@
     
     [[QTPaySDK defaultService] fetchUserDiscountInfoWithQueryType:QTQueryDiscountTypeNone amount:nil callBack:^(NSDictionary *resultDic) {
         if ([resultDic[@"respcd"] isEqualToString:@"0000"]) {
-            self.balanceLabel.text = [[[resultDic[@"data"][@"balance"] stringValue] convertToYuan] stringByAppendingString:@""];
+            self.balanceLabel.text = [[[resultDic[@"data"][@"balance"] stringValue] convertToYuan] stringByAppendingString:@"元"];
             self.couponList = resultDic[@"data"][@"coupons"];
         }else{
             UIAlertView *resultAlert = [UIAlertView bk_alertViewWithTitle:@"提示" message:resultDic[@"respmsg"]];

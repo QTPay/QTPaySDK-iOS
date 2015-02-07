@@ -262,10 +262,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DXP-is-0CJ" userLabel="orderImageView">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="719"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="556"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="order_bg" translatesAutoresizingMaskIntoConstraints="NO" id="rr5-sW-QHf">
-                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="719"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="556"/>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="188-OJ-HRZ">
                                                         <rect key="frame" x="72" y="408" width="177" height="49"/>
@@ -440,7 +440,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="108" placeholderIntrinsicHeight="21" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugz-m5-2uF">
                                                     <rect key="frame" x="204" y="13" width="108" height="21"/>
                                                     <string key="text" base64-UTF8="YES">
-GcKlIDAuMDAg5YWDA
+GTAuMDAg5YWDA
 </string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.97254901959999995" green="0.58039215690000001" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -472,7 +472,7 @@ GcKlIDAuMDAg5YWDA
         </scene>
     </scenes>
     <resources>
-        <image name="order_bg" width="485" height="719"/>
+        <image name="order_bg" width="375" height="556"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
