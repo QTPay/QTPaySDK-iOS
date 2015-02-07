@@ -2,12 +2,19 @@
 //  QTPaySDK.h
 //  QTSDKDemo
 //
-//  Created by YoungShook on 14/12/6.
-//  Copyright (c) 2014年 QFPay. All rights reserved.
+//  Created by QTPay on 14/12/6.
+//  Copyright (c) 2014年 QTPay. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import "QTPayOrder.h"
+
+typedef NS_ENUM (NSInteger, QTQueryDiscountType) {
+    QTQueryDiscountTypeNone = 1 << 0,        /**默认全部*/
+    QTQueryDiscountTypeBalance = 1 << 1,     /**余额*/
+    QTQueryDiscountTypeCoupon = 1 << 2,      /**优惠券*/
+    QTQueryDiscountTypePoint = 1 << 3,       /**积分*/
+};
 
 @interface QTPaySDK : NSObject
 
@@ -62,12 +69,13 @@
 - (void)fetchOrderShareURLCallBack:(CompletionBlock)completionBlock;
 
 /**
- *	获取当前登录用户的优惠信息(积分,优惠券)
+ *	获取当前登录用户的优惠信息(余额，优惠券，积分)
  *
- *	@param goodsAmount     当前商品或服务消费金额(单位分)
+ *	@param queryType       查询类型
+ *	@param amount          当前商品或服务消费金额(单位分，选填，若传amount则返回满足此金额可用的优惠券)
  *	@param completionBlock 用户优惠信息回调Block
  */
-- (void)fetchUserDiscountInfoWithOrder:(NSString *)goodsAmount callBack:(CompletionBlock)completionBlock;
+- (void)fetchUserDiscountInfoWithQueryType:(QTQueryDiscountType)type amount:(NSString *)amount callBack:(CompletionBlock)completionBlock;
 
 /**
  *	获取当前账户余额充值金额对应的优惠信息,可用显示
@@ -76,6 +84,13 @@
  *	@param completionBlock 充值优惠信息回调Block
  */
 - (void)fetchBalanceRechargeDiscountInfoWithAmount:(NSString *)recharge callBack:(CompletionBlock)completionBlock;
+
+/**
+ *	查询账户余额充值金额规则
+ *
+ *	@param completionBlock 余额充值规则回调Block
+ */
+- (void)queryBalanceRechargeDiscountRuleCallBack:(CompletionBlock)completionBlock;
 
 #pragma mark - UI interface
 

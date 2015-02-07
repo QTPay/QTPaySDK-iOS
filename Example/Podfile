@@ -1,0 +1,14 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '6.0'
+
+target 'QTPaySDKDemo' do
+  pod "QTPaySDK_UI_All", :path => "../"
+  pod 'AFNetworking'
+  pod 'MBProgressHUD'
+  pod 'BlocksKit'
+end
+
+target 'QTPaySDKDemoTests' do
+  pod "QTPaySDK_UI_All", :path => "../"
+end

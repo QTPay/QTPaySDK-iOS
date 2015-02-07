@@ -1,0 +1,4 @@
+PODS_QTPAYSDKDEMOTESTS_QTPAYSDK_UI_ALL_FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/../../PayChannels/AlipaySDK_2.0" "$(PODS_ROOT)/../.."
+PODS_QTPAYSDKDEMOTESTS_QTPAYSDK_UI_ALL_LD_RUNPATH_SEARCH_PATHS = "$(SRCROOT)/**/*.framework"
+PODS_QTPAYSDKDEMOTESTS_QTPAYSDK_UI_ALL_LIBRARY_SEARCH_PATHS = "$(PODS_ROOT)/../../PayChannels/AlipaySDK_2.0" "$(PODS_ROOT)/../../PayChannels/AlipaySDK_2.0" "$(PODS_ROOT)/../../PayChannels/WeChatSDK_1.5"
+PODS_QTPAYSDKDEMOTESTS_QTPAYSDK_UI_ALL_OTHER_LDFLAGS = -l"ObjC" -l"WeChatSDK" -l"c++" -l"crypto" -l"sqlite3" -l"ssl" -l"z" -framework "AlipaySDK" -framework "CoreLocation" -framework "Foundation" -framework "MobileCoreServices" -framework "QTPaySDK" -framework "SystemConfiguration" -framework "UIKit"

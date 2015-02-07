@@ -2,8 +2,8 @@
 //  QTPayOrder.h
 //  QTSDKDemo
 //
-//  Created by YoungShook on 14/12/11.
-//  Copyright (c) 2014年 QFPay. All rights reserved.
+//  Created by QTPay on 14/12/11.
+//  Copyright (c) 2014年 QTPay. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
