@@ -49,7 +49,7 @@
     AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
     securityPolicy.allowInvalidCertificates = YES;
     manager.securityPolicy = securityPolicy;
-    [manager GET:[NSString stringWithFormat:@"%@/ordertoken?total_amt=%@",QTSDKDemoBaseAPI,self.order.total_amt] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager GET:[NSString stringWithFormat:@"%@/ordertoken?total_amt=%@&app_code=%@",QTSDKDemoBaseAPI,self.order.total_amt,QTSDKAppCode] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         [MBProgressHUD hideHUDForView:weakSelf.view animated:NO];
         weakSelf.order.order_token = responseObject[@"token"];

@@ -55,7 +55,7 @@
     AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
     securityPolicy.allowInvalidCertificates = YES;
     manager.securityPolicy = securityPolicy;
-    [manager GET:[NSString stringWithFormat:@"%@/createtoken?mobile=%@",QTSDKDemoBaseAPI,self.usernameTextField.text] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager GET:[NSString stringWithFormat:@"%@/createtoken?mobile=%@&app_code=%@",QTSDKDemoBaseAPI,self.usernameTextField.text,QTSDKAppCode] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [weakSelf.activityIndicatorView stopAnimating];
         QTDemoGoodsListViewController *goodsListViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"QTDemoGoodsListViewController"];
         [QTDemoUserInfo sharedInstance].mobile = weakSelf.usernameTextField.text;
