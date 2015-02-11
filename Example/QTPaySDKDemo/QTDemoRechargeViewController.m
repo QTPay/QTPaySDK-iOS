@@ -25,7 +25,7 @@
 - (IBAction)onRecharge:(id)sender {
     
     if(![self.inputTextField.text verfiyMoney]) {
-        [[UIAlertView bk_showAlertViewWithTitle:@"提示" message:@"请输入正确的金额" cancelButtonTitle:@"确定" otherButtonTitles:nil handler:nil]show];
+        [UIAlertView showWithTitle:@"提示" message:@"请输入正确的金额" cancelButtonTitle:@"确定" otherButtonTitles:nil tapBlock:nil];
         return;
     }
     
@@ -63,15 +63,12 @@
                 resultString = @"无效的请求参数";
             }
             
-            UIAlertView *resultAlert = [UIAlertView bk_alertViewWithTitle:resultString message:resultDic[@"respmsg"]];
-            [resultAlert bk_addButtonWithTitle:@"确定" handler:^{
-                
-            }];
-            [resultAlert show];
+            [UIAlertView showWithTitle:resultString message:resultDic[@"respmsg"] cancelButtonTitle:@"确定" otherButtonTitles:nil tapBlock:nil];
             
         }];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        [[UIAlertView bk_showAlertViewWithTitle:@"提示" message:error.localizedDescription cancelButtonTitle:@"确定" otherButtonTitles:nil handler:nil] show];
+        
+        [UIAlertView showWithTitle:@"提示" message:error.localizedDescription cancelButtonTitle:@"确定" otherButtonTitles:nil tapBlock:nil];
     }];
 
 }

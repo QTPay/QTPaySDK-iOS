@@ -43,7 +43,7 @@
     }
     
     if(errorTip) {
-        [[UIAlertView bk_showAlertViewWithTitle:@"提示" message:errorTip cancelButtonTitle:@"确定" otherButtonTitles:nil handler:nil] show];
+        [UIAlertView showWithTitle:@"提示" message:errorTip cancelButtonTitle:@"确定" otherButtonTitles:nil tapBlock:nil];
         return;
     }
     
@@ -63,7 +63,7 @@
         [weakSelf.navigationController pushViewController:goodsListViewController animated:YES];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [weakSelf.activityIndicatorView stopAnimating];
-        [[UIAlertView bk_showAlertViewWithTitle:@"提示" message:error.localizedDescription cancelButtonTitle:@"确定" otherButtonTitles:nil handler:nil]show];
+        [UIAlertView showWithTitle:@"提示" message:error.localizedDescription cancelButtonTitle:@"确定" otherButtonTitles:nil tapBlock:nil];
     }];
     
 }

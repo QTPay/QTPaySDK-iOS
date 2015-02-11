@@ -16,6 +16,6 @@
     #import "QTSDKDemoConstant.h"
     #import "NSString+QTPayHelper.h"
     #import <AFNetworking.h>
-    #import <BlocksKit+UIKit.h>
+    #import "UIAlertView+Blocks.h"
     #import "QTDemoUserInfo.h"
 #endif

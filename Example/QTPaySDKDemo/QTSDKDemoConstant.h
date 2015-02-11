@@ -9,8 +9,7 @@
 #ifndef QTSDKDemo_QTSDKDemoConstant_h
 #define QTSDKDemo_QTSDKDemoConstant_h
 
-static NSString *const QTSDKDemoBaseAPI = @"https://qtdemo.qfpay.com"; // online
+static NSString *const QTSDKDemoBaseAPI = @"https://qtdemosandbox.qfpay.com"; // online
 static NSString *const QTSDKAppCode = @"33856FB5471AB823119F2810C0CC2D7B";
-
 
 #endif

@@ -27,7 +27,7 @@
     self.amountArray = @[@"0.01", @"0.02", @"0.03"];
     self.tableView.rowHeight = 44.0f;
     
-    [QTPaySDK setQTPayWithAppID:QTSDKAppCode accessToken:[QTDemoUserInfo sharedInstance].token appScheme:@"QTDemoDemo" callBack:^(NSDictionary *resultDic) {
+    [QTPaySDK setQTPayWithAppID:QTSDKAppCode accessToken:[QTDemoUserInfo sharedInstance].token appScheme:@"QTSDKDemo" callBack:^(NSDictionary *resultDic) {
     }];
 }
 

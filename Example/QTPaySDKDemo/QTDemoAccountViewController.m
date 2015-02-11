@@ -37,9 +37,7 @@
             self.balanceLabel.text = [[[resultDic[@"data"][@"balance"] stringValue] convertToYuan] stringByAppendingString:@" 元"];
             self.couponList = resultDic[@"data"][@"coupons"];
         }else{
-            UIAlertView *resultAlert = [UIAlertView bk_alertViewWithTitle:@"提示" message:resultDic[@"respmsg"]];
-            [resultAlert bk_addButtonWithTitle:@"确定" handler:nil];
-            [resultAlert show];
+            [UIAlertView showWithTitle:@"提示" message:resultDic[@"respmsg"] cancelButtonTitle:@"确定" otherButtonTitles:nil tapBlock:nil];
         }
     }];
     

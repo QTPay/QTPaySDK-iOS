@@ -8,15 +8,15 @@
 
 #import "QTDemoGoodsDetailViewController.h"
 #import "MBProgressHUD.h"
-#import <BlocksKit+UIKit.h>
 #import "QTPayOrder.h"
 #import "QTPaySDK.h"
 #import "WXApi.h"
 
-@interface QTDemoGoodsDetailViewController ()
+@interface QTDemoGoodsDetailViewController ()<UIActionSheetDelegate>
 
 @property (nonatomic,strong) QTPayOrder *order;
 @property (nonatomic,weak) IBOutlet UIButton *topPayButton;
+@property (nonatomic,strong) NSDictionary *shareInfoDic;
 @end
 
 @implementation QTDemoGoodsDetailViewController
@@ -72,52 +72,42 @@
                 resultString = @"无效的请求参数";
             }
             
-            UIAlertView *resultAlert = [UIAlertView bk_alertViewWithTitle:resultString message:resultDic[@"respmsg"]];
-            [resultAlert bk_addButtonWithTitle:@"确定" handler:^{
-                
-            }];
-            
             if(respCode == QTSuccess) {
-                
-                [resultAlert bk_addButtonWithTitle:@"分享红包" handler:^{
-                    
+                [UIAlertView showWithTitle:resultString message:resultDic[@"respmsg"] cancelButtonTitle:@"返回" otherButtonTitles:@[@"分享红包"] tapBlock:^(UIAlertView *alertView, NSInteger buttonIndex) {
                     [[QTPaySDK defaultService]fetchOrderShareURLCallBack:^(NSDictionary *resultDic) {
                         if ([resultDic[@"respcd"] isEqualToString:@"0000"]) {
                             [weakSelf shareOrderURL:resultDic];
                         }
                     }];
                 }];
-                
+            }else{
+                [UIAlertView showWithTitle:resultString message:resultDic[@"respmsg"] cancelButtonTitle:@"返回" otherButtonTitles:nil tapBlock:nil];
             }
-            [resultAlert show];
             
         }];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        [[UIAlertView bk_showAlertViewWithTitle:@"提示" message:error.localizedDescription cancelButtonTitle:@"确定" otherButtonTitles:nil handler:nil] show];
+        [UIAlertView showWithTitle:@"提示" message:error.localizedDescription cancelButtonTitle:@"确定" otherButtonTitles:nil tapBlock:nil];
     }];
 }
 
 - (void)shareOrderURL:(NSDictionary *)dic{
-    
-    __weak QTDemoGoodsDetailViewController *weakSelf = self;
-    UIActionSheet *actionSheet = [UIActionSheet bk_actionSheetWithTitle:@"微信分享红包"];
-    [actionSheet bk_addButtonWithTitle:@"分享给好友" handler:^{
-        [weakSelf shareWechat:dic shareScene:0];
-    }];
-    [actionSheet bk_addButtonWithTitle:@"分享到朋友圈" handler:^{
-        [weakSelf shareWechat:dic shareScene:1];
-    }];
-    [actionSheet bk_addButtonWithTitle:@"取消" handler:^{
-    }];
+    self.shareInfoDic = dic;
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"微信分享红包" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"分享给好友",@"分享到朋友圈", nil];
     [actionSheet showInView:self.view];
+    
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex < 2) {
+        [self shareWechat:self.shareInfoDic shareScene:buttonIndex];
+    }
 }
 
 - (void)shareWechat:(NSDictionary *)shareDic shareScene:(NSInteger)sceneNumber{
     
     if (![WXApi isWXAppInstalled]) {
-        UIAlertView *alert = [UIAlertView bk_alertViewWithTitle:@"提示" message:@"您设备没有安装微信"];
-        [alert show];
+        [UIAlertView showWithTitle:@"提示" message:@"您设备没有安装微信" cancelButtonTitle:@"确定" otherButtonTitles:nil tapBlock:nil];
         return;
     }
     
