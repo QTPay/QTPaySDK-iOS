@@ -16,6 +16,13 @@ typedef NS_ENUM (NSInteger, QTQueryDiscountType) {
     QTQueryDiscountTypePoint = 1 << 3,       /**积分*/
 };
 
+
+typedef NS_ENUM (NSInteger, QTSDKModelType) {
+    QTSDKModelTypeSandBox,
+    QTSDKModelTypeProduction,
+    QTSDKModelTypeTest,
+};
+
 @interface QTPaySDK : NSObject
 
 #pragma mark - API interface
@@ -28,14 +35,30 @@ typedef NS_ENUM (NSInteger, QTQueryDiscountType) {
 + (instancetype)defaultService;
 
 /**
- *	设置钱台SDK 签约商户的AppID和访问Token(Token从钱台后台API获取,需在创建支付订单前传入此Token和AppID)
+ *	设置钱台SDK 环境（沙盒/正式）
+ * 
+ *  @model 设置环境
+ *  默认：沙盒环境
+ */
++ (void)setQTPayModel:(QTSDKModelType) model;
+
+/**
+ *	设置钱台SDK 签约商户的AppCode和访问Token(Token从钱台后台API获取,需在创建支付订单前传入此Token/AppCode/AppKey)
  *
- *	@param appid 签约商户的AppID
+ *	@param appCode 签约商户的AppCode
+ *	@param appKey 签约商户的AppKey
  *	@param token 访问权限Token
  *	@param scheme App在info.plist中的scheme
+ */
++ (void)setQTPayWithAppCode:(NSString *)appCode appKey:(NSString *)appKey accessToken:(NSString *)token appScheme:(NSString *)scheme;
+
+/**
+ *  获取收银台配置信息
+ *
+ *	@param order           订单信息
  *	@param completionBlock 配置结果回调Block
  */
-+ (void)setQTPayWithAppID:(NSString *)appid accessToken:(NSString *)token appScheme:(NSString *)scheme callBack:(CompletionBlock)completionBlock;
++ (void)fetchCheckoutConfigWithOrder:(QTPayOrder *)order callBack:(CompletionBlock)completionBlock;
 
 /**
  *	创建支付订单并发起支付
@@ -44,6 +67,13 @@ typedef NS_ENUM (NSInteger, QTQueryDiscountType) {
  *	@param payCompletionBlock 支付结果回调Block
  */
 - (void)paymentRequestWithOrder:(QTPayOrder *)order callBack:(PayCompletionBlock)payCompletionBlock;
+
+/**
+ *  获取服务器订单结果
+ *
+ *	@param completionBlock 配置结果回调Block
+ */
+- (void)fetchOrderResultCallBack:(CompletionBlock)completionBlock;
 
 /**
  *	账户余额充值

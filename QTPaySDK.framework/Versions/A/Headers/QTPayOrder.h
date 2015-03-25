@@ -9,9 +9,10 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM (NSInteger, QTPayType) {
-	QTPayTypeNone = 0, /**使用余额或优惠券抵扣支付金额*/
-	QTPayTypeAliPay, /**使用支付宝支付*/
-	QTPayTypeWeChat, /**使用微信支付*/
+    QTPayTypeNone   = 0,       /**使用余额或优惠券抵扣支付金额*/
+    QTPayTypeAliPay = 1,       /**使用支付宝支付*/
+    QTPayTypeWeChat = 2,       /**使用微信支付*/
+    QTPayTypeOffline    = 4,   /**线下支付*/
 };
 
 typedef NS_ENUM (NSInteger, QTActionType) {
@@ -26,6 +27,7 @@ typedef NS_ENUM (NSInteger, QTRespCode) {
 	QTErrCodeSentFail   = -3,   /**发送交易失败    */
 	QTErrConnection     = -4,   /**网络连接失败*/
 	QTErrInvalidParameters  = -5,   /**无效的请求参数*/
+    QTSuccessOffline    = -6,   /**线下订单成功    */
 };
 
 /**
