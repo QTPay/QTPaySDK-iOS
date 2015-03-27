@@ -8,11 +8,13 @@
 
 #import "QTDemoLoginViewController.h"
 #import "QTDemoGoodsListViewController.h"
+#import "QTDemoSettingListViewController.h"
 
 @interface QTDemoLoginViewController ()
 @property (nonatomic,weak) IBOutlet UIButton *loginButton;
 @property (nonatomic,weak) IBOutlet UITextField *usernameTextField;
 @property (nonatomic,strong) UIActivityIndicatorView *activityIndicatorView;
+@property (nonatomic,copy) NSIndexPath *selectedIndexPath;
 @end
 
 @implementation QTDemoLoginViewController
@@ -30,6 +32,7 @@
     self.loginButton.layer.borderWidth = 1.f;
     
     [self.usernameTextField becomeFirstResponder];
+    [self __handleTwoFingerSwipeAction];
     // Do any additional setup after loading the view.
 }
 
@@ -55,7 +58,8 @@
     AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
     securityPolicy.allowInvalidCertificates = YES;
     manager.securityPolicy = securityPolicy;
-    [manager GET:[NSString stringWithFormat:@"%@/createtoken?mobile=%@&app_code=%@",QTSDKDemoBaseAPI,self.usernameTextField.text,QTSDKAppCode] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    
+    [manager GET:[NSString stringWithFormat:@"%@/createtoken?mobile=%@&app_code=%@&out_mchnt=%@",QTSDKDemoBaseAPI,self.usernameTextField.text,QTSDKAppCode,QTSDKDemoOutMerchant] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [weakSelf.activityIndicatorView stopAnimating];
         QTDemoGoodsListViewController *goodsListViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"QTDemoGoodsListViewController"];
         [QTDemoUserInfo sharedInstance].mobile = weakSelf.usernameTextField.text;
@@ -65,6 +69,28 @@
         [weakSelf.activityIndicatorView stopAnimating];
         [UIAlertView showWithTitle:@"提示" message:error.localizedDescription cancelButtonTitle:@"确定" otherButtonTitles:nil tapBlock:nil];
     }];
+    
+}
+
+- (void)__handleTwoFingerSwipeAction{
+    
+    UISwipeGestureRecognizer *actionGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
+    [actionGestureRecognizer setNumberOfTouchesRequired:2];
+    [actionGestureRecognizer setDirection:UISwipeGestureRecognizerDirectionRight];
+    [self.view addGestureRecognizer:actionGestureRecognizer];
+    
+}
+
+- (void)handleSwipeFrom:(UISwipeGestureRecognizer *)recognizer{
+    
+    QTDemoSettingListViewController *settingListViewController = [QTDemoSettingListViewController new];
+    UINavigationController *settingNavigationController = [[UINavigationController alloc] initWithRootViewController:settingListViewController];
+    settingListViewController.selectedIndexPath = self.selectedIndexPath;
+    settingListViewController.selectedListBlock = ^(id object) {
+        QTDemoSettingListViewController *settingListViewController = (QTDemoSettingListViewController *)object;
+        self.selectedIndexPath = settingListViewController.selectedIndexPath;
+    };
+    [self.navigationController presentViewController:settingNavigationController animated:YES completion:nil];
     
 }
 

@@ -11,19 +11,23 @@
 		A7F0CEB379368D23D7169D74 /* libPods-QTPaySDKDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11E2FCD78B817BA1CE730191 /* libPods-QTPaySDKDemoTests.a */; };
 		B54386231A7A282E007951B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B54386221A7A282E007951B2 /* main.m */; };
 		B543863D1A7A282E007951B2 /* QTPaySDKDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B543863C1A7A282E007951B2 /* QTPaySDKDemoTests.m */; };
-		B5851B861A86262800F33D57 /* QTDemoGoodsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5851B6F1A86262800F33D57 /* QTDemoGoodsDetailViewController.m */; };
-		B5851B871A86262800F33D57 /* QTDemoUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B5851B711A86262800F33D57 /* QTDemoUserInfo.m */; };
-		B5851B881A86262800F33D57 /* QTDemoCouponListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5851B731A86262800F33D57 /* QTDemoCouponListViewController.m */; };
-		B5851B891A86262800F33D57 /* QTDemoAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5851B751A86262800F33D57 /* QTDemoAccountViewController.m */; };
-		B5851B8A1A86262800F33D57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5851B761A86262800F33D57 /* Main.storyboard */; };
-		B5851B8B1A86262800F33D57 /* NSString+QTPayHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B5851B781A86262800F33D57 /* NSString+QTPayHelper.m */; };
-		B5851B8C1A86262800F33D57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5851B791A86262800F33D57 /* AppDelegate.m */; };
-		B5851B8D1A86262800F33D57 /* QTDemoGoodsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5851B7C1A86262800F33D57 /* QTDemoGoodsListViewController.m */; };
-		B5851B8E1A86262800F33D57 /* QTDemoLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5851B7D1A86262800F33D57 /* QTDemoLoginViewController.m */; };
-		B5851B8F1A86262800F33D57 /* QTDemoRechargeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5851B7F1A86262800F33D57 /* QTDemoRechargeViewController.m */; };
 		B5851B901A86262800F33D57 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5851B831A86262800F33D57 /* Images.xcassets */; };
 		B5851BA01A862AF200F33D57 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5851B9E1A862AF200F33D57 /* Info.plist */; };
 		B5851BA11A862AF200F33D57 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5851B9F1A862AF200F33D57 /* InfoPlist.strings */; };
+		B5FB7FE41AC5A344000FE872 /* QTSDKDemoVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FB7FCC1AC5A343000FE872 /* QTSDKDemoVariable.m */; };
+		B5FB7FE51AC5A344000FE872 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FB7FCE1AC5A343000FE872 /* AppDelegate.m */; };
+		B5FB7FE61AC5A344000FE872 /* QTDemoUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FB7FD01AC5A343000FE872 /* QTDemoUserInfo.m */; };
+		B5FB7FE71AC5A344000FE872 /* QTDemoLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FB7FD21AC5A343000FE872 /* QTDemoLoginViewController.m */; };
+		B5FB7FE81AC5A344000FE872 /* QTDemoSettingViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FB7FD41AC5A343000FE872 /* QTDemoSettingViewCell.m */; };
+		B5FB7FE91AC5A344000FE872 /* QTDemoSettingViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5FB7FD51AC5A343000FE872 /* QTDemoSettingViewCell.xib */; };
+		B5FB7FEA1AC5A344000FE872 /* QTDemoSettingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FB7FD71AC5A343000FE872 /* QTDemoSettingListViewController.m */; };
+		B5FB7FEB1AC5A344000FE872 /* QTDemoGoodsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FB7FD91AC5A343000FE872 /* QTDemoGoodsListViewController.m */; };
+		B5FB7FEC1AC5A344000FE872 /* QTDemoGoodsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FB7FDB1AC5A343000FE872 /* QTDemoGoodsDetailViewController.m */; };
+		B5FB7FED1AC5A344000FE872 /* QTDemoAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FB7FDD1AC5A343000FE872 /* QTDemoAccountViewController.m */; };
+		B5FB7FEE1AC5A344000FE872 /* QTDemoCouponListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FB7FDF1AC5A343000FE872 /* QTDemoCouponListViewController.m */; };
+		B5FB7FEF1AC5A344000FE872 /* QTDemoRechargeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FB7FE11AC5A343000FE872 /* QTDemoRechargeViewController.m */; };
+		B5FB7FF01AC5A344000FE872 /* NSString+QTPayHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FB7FE31AC5A344000FE872 /* NSString+QTPayHelper.m */; };
+		B5FB7FF21AC5A35E000FE872 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5FB7FF11AC5A35E000FE872 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,32 +51,38 @@
 		B54386361A7A282E007951B2 /* QTPaySDKDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QTPaySDKDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B543863B1A7A282E007951B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B543863C1A7A282E007951B2 /* QTPaySDKDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTPaySDKDemoTests.m; sourceTree = "<group>"; };
-		B5851B6F1A86262800F33D57 /* QTDemoGoodsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTDemoGoodsDetailViewController.m; sourceTree = "<group>"; };
-		B5851B701A86262800F33D57 /* QTDemoUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTDemoUserInfo.h; sourceTree = "<group>"; };
-		B5851B711A86262800F33D57 /* QTDemoUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTDemoUserInfo.m; sourceTree = "<group>"; };
-		B5851B721A86262800F33D57 /* QTDemoCouponListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTDemoCouponListViewController.h; sourceTree = "<group>"; };
-		B5851B731A86262800F33D57 /* QTDemoCouponListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTDemoCouponListViewController.m; sourceTree = "<group>"; };
-		B5851B741A86262800F33D57 /* QTDemoAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTDemoAccountViewController.h; sourceTree = "<group>"; };
-		B5851B751A86262800F33D57 /* QTDemoAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTDemoAccountViewController.m; sourceTree = "<group>"; };
-		B5851B761A86262800F33D57 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		B5851B771A86262800F33D57 /* NSString+QTPayHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+QTPayHelper.h"; sourceTree = "<group>"; };
-		B5851B781A86262800F33D57 /* NSString+QTPayHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QTPayHelper.m"; sourceTree = "<group>"; };
-		B5851B791A86262800F33D57 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B5851B7A1A86262800F33D57 /* QTDemoGoodsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTDemoGoodsDetailViewController.h; sourceTree = "<group>"; };
-		B5851B7B1A86262800F33D57 /* QTDemoGoodsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTDemoGoodsListViewController.h; sourceTree = "<group>"; };
-		B5851B7C1A86262800F33D57 /* QTDemoGoodsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTDemoGoodsListViewController.m; sourceTree = "<group>"; };
-		B5851B7D1A86262800F33D57 /* QTDemoLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTDemoLoginViewController.m; sourceTree = "<group>"; };
-		B5851B7E1A86262800F33D57 /* QTDemoRechargeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTDemoRechargeViewController.h; sourceTree = "<group>"; };
-		B5851B7F1A86262800F33D57 /* QTDemoRechargeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTDemoRechargeViewController.m; sourceTree = "<group>"; };
-		B5851B801A86262800F33D57 /* QTSDKDemoConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTSDKDemoConstant.h; sourceTree = "<group>"; };
 		B5851B811A86262800F33D57 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		B5851B821A86262800F33D57 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		B5851B831A86262800F33D57 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B5851B841A86262800F33D57 /* QTDemoLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTDemoLoginViewController.h; sourceTree = "<group>"; };
-		B5851B851A86262800F33D57 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B5851B911A8626C300F33D57 /* QTPaySDKDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QTPaySDKDemo-Prefix.pch"; sourceTree = "<group>"; };
 		B5851B9E1A862AF200F33D57 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5851B9F1A862AF200F33D57 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		B5FB7FCB1AC5A343000FE872 /* QTSDKDemoVariable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTSDKDemoVariable.h; sourceTree = "<group>"; };
+		B5FB7FCC1AC5A343000FE872 /* QTSDKDemoVariable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTSDKDemoVariable.m; sourceTree = "<group>"; };
+		B5FB7FCD1AC5A343000FE872 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B5FB7FCE1AC5A343000FE872 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B5FB7FCF1AC5A343000FE872 /* QTDemoUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTDemoUserInfo.h; sourceTree = "<group>"; };
+		B5FB7FD01AC5A343000FE872 /* QTDemoUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTDemoUserInfo.m; sourceTree = "<group>"; };
+		B5FB7FD11AC5A343000FE872 /* QTDemoLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTDemoLoginViewController.h; sourceTree = "<group>"; };
+		B5FB7FD21AC5A343000FE872 /* QTDemoLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTDemoLoginViewController.m; sourceTree = "<group>"; };
+		B5FB7FD31AC5A343000FE872 /* QTDemoSettingViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTDemoSettingViewCell.h; sourceTree = "<group>"; };
+		B5FB7FD41AC5A343000FE872 /* QTDemoSettingViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTDemoSettingViewCell.m; sourceTree = "<group>"; };
+		B5FB7FD51AC5A343000FE872 /* QTDemoSettingViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QTDemoSettingViewCell.xib; sourceTree = "<group>"; };
+		B5FB7FD61AC5A343000FE872 /* QTDemoSettingListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTDemoSettingListViewController.h; sourceTree = "<group>"; };
+		B5FB7FD71AC5A343000FE872 /* QTDemoSettingListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTDemoSettingListViewController.m; sourceTree = "<group>"; };
+		B5FB7FD81AC5A343000FE872 /* QTDemoGoodsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTDemoGoodsListViewController.h; sourceTree = "<group>"; };
+		B5FB7FD91AC5A343000FE872 /* QTDemoGoodsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTDemoGoodsListViewController.m; sourceTree = "<group>"; };
+		B5FB7FDA1AC5A343000FE872 /* QTDemoGoodsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTDemoGoodsDetailViewController.h; sourceTree = "<group>"; };
+		B5FB7FDB1AC5A343000FE872 /* QTDemoGoodsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTDemoGoodsDetailViewController.m; sourceTree = "<group>"; };
+		B5FB7FDC1AC5A343000FE872 /* QTDemoAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTDemoAccountViewController.h; sourceTree = "<group>"; };
+		B5FB7FDD1AC5A343000FE872 /* QTDemoAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTDemoAccountViewController.m; sourceTree = "<group>"; };
+		B5FB7FDE1AC5A343000FE872 /* QTDemoCouponListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTDemoCouponListViewController.h; sourceTree = "<group>"; };
+		B5FB7FDF1AC5A343000FE872 /* QTDemoCouponListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTDemoCouponListViewController.m; sourceTree = "<group>"; };
+		B5FB7FE01AC5A343000FE872 /* QTDemoRechargeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTDemoRechargeViewController.h; sourceTree = "<group>"; };
+		B5FB7FE11AC5A343000FE872 /* QTDemoRechargeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTDemoRechargeViewController.m; sourceTree = "<group>"; };
+		B5FB7FE21AC5A344000FE872 /* NSString+QTPayHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+QTPayHelper.h"; sourceTree = "<group>"; };
+		B5FB7FE31AC5A344000FE872 /* NSString+QTPayHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QTPayHelper.m"; sourceTree = "<group>"; };
+		B5FB7FF11AC5A35E000FE872 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C76705E0A3ABF81C47707E44 /* libPods-QTPaySDKDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QTPaySDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -141,27 +151,33 @@
 			children = (
 				B5851B811A86262800F33D57 /* WXApi.h */,
 				B5851B821A86262800F33D57 /* WXApiObject.h */,
-				B5851B801A86262800F33D57 /* QTSDKDemoConstant.h */,
-				B5851B701A86262800F33D57 /* QTDemoUserInfo.h */,
-				B5851B711A86262800F33D57 /* QTDemoUserInfo.m */,
-				B5851B851A86262800F33D57 /* AppDelegate.h */,
-				B5851B791A86262800F33D57 /* AppDelegate.m */,
-				B5851B841A86262800F33D57 /* QTDemoLoginViewController.h */,
-				B5851B7D1A86262800F33D57 /* QTDemoLoginViewController.m */,
-				B5851B7B1A86262800F33D57 /* QTDemoGoodsListViewController.h */,
-				B5851B7C1A86262800F33D57 /* QTDemoGoodsListViewController.m */,
-				B5851B741A86262800F33D57 /* QTDemoAccountViewController.h */,
-				B5851B751A86262800F33D57 /* QTDemoAccountViewController.m */,
-				B5851B721A86262800F33D57 /* QTDemoCouponListViewController.h */,
-				B5851B731A86262800F33D57 /* QTDemoCouponListViewController.m */,
-				B5851B7A1A86262800F33D57 /* QTDemoGoodsDetailViewController.h */,
-				B5851B6F1A86262800F33D57 /* QTDemoGoodsDetailViewController.m */,
-				B5851B7E1A86262800F33D57 /* QTDemoRechargeViewController.h */,
-				B5851B7F1A86262800F33D57 /* QTDemoRechargeViewController.m */,
-				B5851B771A86262800F33D57 /* NSString+QTPayHelper.h */,
-				B5851B781A86262800F33D57 /* NSString+QTPayHelper.m */,
+				B5FB7FCB1AC5A343000FE872 /* QTSDKDemoVariable.h */,
+				B5FB7FCC1AC5A343000FE872 /* QTSDKDemoVariable.m */,
+				B5FB7FCD1AC5A343000FE872 /* AppDelegate.h */,
+				B5FB7FCE1AC5A343000FE872 /* AppDelegate.m */,
+				B5FB7FCF1AC5A343000FE872 /* QTDemoUserInfo.h */,
+				B5FB7FD01AC5A343000FE872 /* QTDemoUserInfo.m */,
+				B5FB7FD11AC5A343000FE872 /* QTDemoLoginViewController.h */,
+				B5FB7FD21AC5A343000FE872 /* QTDemoLoginViewController.m */,
+				B5FB7FD31AC5A343000FE872 /* QTDemoSettingViewCell.h */,
+				B5FB7FD41AC5A343000FE872 /* QTDemoSettingViewCell.m */,
+				B5FB7FD51AC5A343000FE872 /* QTDemoSettingViewCell.xib */,
+				B5FB7FD61AC5A343000FE872 /* QTDemoSettingListViewController.h */,
+				B5FB7FD71AC5A343000FE872 /* QTDemoSettingListViewController.m */,
+				B5FB7FD81AC5A343000FE872 /* QTDemoGoodsListViewController.h */,
+				B5FB7FD91AC5A343000FE872 /* QTDemoGoodsListViewController.m */,
+				B5FB7FDA1AC5A343000FE872 /* QTDemoGoodsDetailViewController.h */,
+				B5FB7FDB1AC5A343000FE872 /* QTDemoGoodsDetailViewController.m */,
+				B5FB7FDC1AC5A343000FE872 /* QTDemoAccountViewController.h */,
+				B5FB7FDD1AC5A343000FE872 /* QTDemoAccountViewController.m */,
+				B5FB7FDE1AC5A343000FE872 /* QTDemoCouponListViewController.h */,
+				B5FB7FDF1AC5A343000FE872 /* QTDemoCouponListViewController.m */,
+				B5FB7FE01AC5A343000FE872 /* QTDemoRechargeViewController.h */,
+				B5FB7FE11AC5A343000FE872 /* QTDemoRechargeViewController.m */,
+				B5FB7FE21AC5A344000FE872 /* NSString+QTPayHelper.h */,
+				B5FB7FE31AC5A344000FE872 /* NSString+QTPayHelper.m */,
+				B5FB7FF11AC5A35E000FE872 /* Main.storyboard */,
 				B5851B831A86262800F33D57 /* Images.xcassets */,
-				B5851B761A86262800F33D57 /* Main.storyboard */,
 				B54386201A7A282E007951B2 /* Supporting Files */,
 			);
 			path = QTPaySDKDemo;
@@ -281,8 +297,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5FB7FE91AC5A344000FE872 /* QTDemoSettingViewCell.xib in Resources */,
+				B5FB7FF21AC5A35E000FE872 /* Main.storyboard in Resources */,
 				B5851BA01A862AF200F33D57 /* Info.plist in Resources */,
-				B5851B8A1A86262800F33D57 /* Main.storyboard in Resources */,
 				B5851B901A86262800F33D57 /* Images.xcassets in Resources */,
 				B5851BA11A862AF200F33D57 /* InfoPlist.strings in Resources */,
 			);
@@ -365,16 +382,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5851B891A86262800F33D57 /* QTDemoAccountViewController.m in Sources */,
-				B5851B8F1A86262800F33D57 /* QTDemoRechargeViewController.m in Sources */,
-				B5851B881A86262800F33D57 /* QTDemoCouponListViewController.m in Sources */,
-				B5851B861A86262800F33D57 /* QTDemoGoodsDetailViewController.m in Sources */,
-				B5851B8E1A86262800F33D57 /* QTDemoLoginViewController.m in Sources */,
-				B5851B8D1A86262800F33D57 /* QTDemoGoodsListViewController.m in Sources */,
-				B5851B871A86262800F33D57 /* QTDemoUserInfo.m in Sources */,
+				B5FB7FED1AC5A344000FE872 /* QTDemoAccountViewController.m in Sources */,
+				B5FB7FE61AC5A344000FE872 /* QTDemoUserInfo.m in Sources */,
+				B5FB7FE41AC5A344000FE872 /* QTSDKDemoVariable.m in Sources */,
+				B5FB7FF01AC5A344000FE872 /* NSString+QTPayHelper.m in Sources */,
+				B5FB7FE71AC5A344000FE872 /* QTDemoLoginViewController.m in Sources */,
+				B5FB7FEB1AC5A344000FE872 /* QTDemoGoodsListViewController.m in Sources */,
+				B5FB7FEA1AC5A344000FE872 /* QTDemoSettingListViewController.m in Sources */,
+				B5FB7FE81AC5A344000FE872 /* QTDemoSettingViewCell.m in Sources */,
+				B5FB7FEF1AC5A344000FE872 /* QTDemoRechargeViewController.m in Sources */,
+				B5FB7FEE1AC5A344000FE872 /* QTDemoCouponListViewController.m in Sources */,
 				B54386231A7A282E007951B2 /* main.m in Sources */,
-				B5851B8B1A86262800F33D57 /* NSString+QTPayHelper.m in Sources */,
-				B5851B8C1A86262800F33D57 /* AppDelegate.m in Sources */,
+				B5FB7FEC1AC5A344000FE872 /* QTDemoGoodsDetailViewController.m in Sources */,
+				B5FB7FE51AC5A344000FE872 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

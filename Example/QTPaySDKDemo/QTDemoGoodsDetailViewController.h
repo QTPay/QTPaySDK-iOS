@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@class QTPayOrder;
 
 @interface QTDemoGoodsDetailViewController : UIViewController
-@property (nonatomic,copy) NSString *payAmount;
-@property (nonatomic,copy) NSString *goodsName;
+@property (nonatomic,strong) QTPayOrder *order;
 @end

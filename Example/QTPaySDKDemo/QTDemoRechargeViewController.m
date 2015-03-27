@@ -8,6 +8,7 @@
 
 #import "QTDemoRechargeViewController.h"
 #import "QTPaySDK.h"
+#import "MBProgressHUD.h"
 
 @interface QTDemoRechargeViewController ()
 @property(nonatomic, weak) IBOutlet UITextField *inputTextField;
@@ -42,29 +43,38 @@
     AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
     securityPolicy.allowInvalidCertificates = YES;
     manager.securityPolicy = securityPolicy;
-    [manager GET:[NSString stringWithFormat:@"%@/ordertoken?total_amt=%@",QTSDKDemoBaseAPI,order.total_amt] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager GET:[NSString stringWithFormat:@"%@/ordertoken?total_amt=%@&out_mchnt=%@",QTSDKDemoBaseAPI,order.total_amt,QTSDKDemoOutMerchant] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         order.order_token = responseObject[@"token"];
         order.actionType = QTActionTypeRecharge;
         
-        [[QTPaySDK defaultService] presentPaymentViewWithOrder:order withCompletion:^(QTRespCode respCode, QTPayType PayType, NSDictionary *resultDic) {
-            
-            NSString *resultString = nil;
-            if (respCode == QTSuccess) {
-                resultString = @"支付成功";
-            }else if(respCode == QTErrCodeCommon){
-                resultString = @"支付失败";
-            }else if(respCode == QTErrCodeUserCancel){
-                resultString = @"支付取消,可重新发起支付";
-            }else if (respCode == QTErrCodeSentFail){
-                resultString = @"订单创建失败";
-            }else if (respCode == QTErrConnection){
-                resultString = @"网络连接失败";
-            }else if (respCode == QTErrInvalidParameters){
-                resultString = @"无效的请求参数";
+        [MBProgressHUD showHUDAddedTo:self.view animated:NO];
+        [QTPaySDK fetchCheckoutConfigWithOrder:order callBack:^(NSDictionary *resultDic) {
+            [MBProgressHUD hideHUDForView:self.view animated:NO];
+            if ([resultDic[@"result"]isEqualToString:@"success"]) {
+                [[QTPaySDK defaultService] presentPaymentViewWithOrder:order withCompletion:^(QTRespCode respCode, QTPayType PayType, NSDictionary *resultDic) {
+                    
+                    NSString *resultString = nil;
+                    if (respCode == QTSuccess) {
+                        resultString = @"支付成功";
+                    }else if(respCode == QTErrCodeCommon){
+                        resultString = @"支付失败";
+                    }else if(respCode == QTErrCodeUserCancel){
+                        resultString = @"支付取消,可重新发起支付";
+                    }else if (respCode == QTErrCodeSentFail){
+                        resultString = @"订单创建失败";
+                    }else if (respCode == QTErrConnection){
+                        resultString = @"网络连接失败";
+                    }else if (respCode == QTErrInvalidParameters){
+                        resultString = @"无效的请求参数";
+                    }else if (respCode == QTSuccessOffline){
+                        resultString = @"下单成功，等待线下支付";
+                    }
+                    
+                    [UIAlertView showWithTitle:resultString message:resultDic[@"respmsg"] cancelButtonTitle:@"确定" otherButtonTitles:nil tapBlock:nil];
+                }];
+            }else {
+                [UIAlertView showWithTitle:@"提示" message:[NSString stringWithFormat:@"配置信息有误，（%@）",resultDic[@"error"]] cancelButtonTitle:@"确定" otherButtonTitles:nil tapBlock:nil];
             }
-            
-            [UIAlertView showWithTitle:resultString message:resultDic[@"respmsg"] cancelButtonTitle:@"确定" otherButtonTitles:nil tapBlock:nil];
-            
         }];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
