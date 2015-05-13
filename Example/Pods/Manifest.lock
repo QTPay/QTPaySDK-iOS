@@ -20,22 +20,21 @@ PODS:
   - AFNetworking/UIKit (2.5.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - Kiwi (2.3.1)
   - MBProgressHUD (0.9.1)
   - QTPaySDK_UI_All (1.0.4)
   - UIAlertView+Blocks (0.9)
 
 DEPENDENCIES:
   - AFNetworking
+  - Kiwi (= 2.3.1)
   - MBProgressHUD
-  - QTPaySDK_UI_All (from `../`)
+  - QTPaySDK_UI_All
   - UIAlertView+Blocks
-
-EXTERNAL SOURCES:
-  QTPaySDK_UI_All:
-    :path: "../"
 
 SPEC CHECKSUMS:
   AFNetworking: e1d86c2a96bb5d2e7408da36149806706ee122fe
+  Kiwi: f038a6c61f7a9e4d7766bff5717aa3b3fdb75f55
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   QTPaySDK_UI_All: 9faaa1283d857b9e59de53f1594e2409c5a69ca7
   UIAlertView+Blocks: a46c99c5144f6c5dbc7d62fd2a0678daceec89a3

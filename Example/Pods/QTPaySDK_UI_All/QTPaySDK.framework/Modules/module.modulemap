@@ -1,0 +1,6 @@
+framework module QTPaySDK {
+  umbrella header "QTPaySDK.h"
+
+  export *
+  module * { export * }
+}

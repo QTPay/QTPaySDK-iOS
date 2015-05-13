@@ -1,1 +1,1 @@
-../../../../../QTPaySDK.framework/Versions/A/Headers/QTPayOrder.h
+../../../QTPaySDK_UI_All/QTPaySDK.framework/Versions/A/Headers/QTPayOrder.h

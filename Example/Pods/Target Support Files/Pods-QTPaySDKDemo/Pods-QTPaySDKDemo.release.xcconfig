@@ -1,9 +1,0 @@
-FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/../../PayChannels/AlipaySDK_2.0" "$(PODS_ROOT)/../.."
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/MBProgressHUD" "${PODS_ROOT}/Headers/Public/QTPaySDK_UI_All" "${PODS_ROOT}/Headers/Public/UIAlertView+Blocks"
-LD_RUNPATH_SEARCH_PATHS = "$(SRCROOT)/**/*.framework"
-LIBRARY_SEARCH_PATHS = "$(PODS_ROOT)/../../PayChannels/AlipaySDK_2.0" "$(PODS_ROOT)/../../PayChannels/AlipaySDK_2.0" "$(PODS_ROOT)/../../PayChannels/WeChatSDK_1.5"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/MBProgressHUD" -isystem "${PODS_ROOT}/Headers/Public/QTPaySDK_UI_All" -isystem "${PODS_ROOT}/Headers/Public/UIAlertView+Blocks"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"ObjC" -l"Pods-QTPaySDKDemo-AFNetworking" -l"Pods-QTPaySDKDemo-MBProgressHUD" -l"Pods-QTPaySDKDemo-UIAlertView+Blocks" -l"WeChatSDK" -l"c++" -l"crypto" -l"sqlite3" -l"ssl" -l"z" -framework "AlipaySDK" -framework "CoreGraphics" -framework "CoreLocation" -framework "Foundation" -framework "MobileCoreServices" -framework "QTPaySDK" -framework "Security" -framework "SystemConfiguration" -framework "UIKit"
-OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
-PODS_ROOT = ${SRCROOT}/Pods

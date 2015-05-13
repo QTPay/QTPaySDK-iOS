@@ -1,14 +1,15 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '6.0'
-
-target 'QTPaySDKDemo' do
-  pod "QTPaySDK_UI_All", :path => "../"
+target 'QTPaySDK-Example', :exclusive => true do
+  pod 'QTPaySDK_UI_All'
   pod 'UIAlertView+Blocks'
   pod 'AFNetworking'
   pod 'MBProgressHUD'
 end
 
-target 'QTPaySDKDemoTests' do
-  pod "QTPaySDK_UI_All", :path => "../"
+target 'Tests', :exclusive => true do
+  pod 'QTPaySDK_UI_All'
+  pod 'Kiwi', '2.3.1'
 end
+
+inhibit_all_warnings!
