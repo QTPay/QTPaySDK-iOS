@@ -1,3 +1,8 @@
+# version 1.0.4 - 2015-04-29
+------------------------
+- add Settings interface
+- add dynamic Debug interface
+
 # version 1.0.3 - 2015-03-25
 ------------------------
 - add SandBox Env
