@@ -20,6 +20,8 @@
     if ([[url scheme] isEqualToString:@"POSDemo"]) {
         //QFSH CallBack
         NSDictionary *callBackPayDic = [self queryDictionary:url];
+        
+        // 对返回值的签名校验（可选）
         if ([self __verifyRequestSignValidity:callBackPayDic]) {
             [self fetchPayResultInfo:callBackPayDic];
         }else{
@@ -48,7 +50,7 @@
     AFHTTPRequestSerializer *serializer = [AFHTTPRequestSerializer serializer];
     [serializer setValue:@"t" forHTTPHeaderField:@"X-QT-ROUTE"];
     [manager setRequestSerializer:serializer];
-    [manager GET:[NSString stringWithFormat:@"%@/order/v1/query?token=%@&order_id=%@",QTSDKDemoBaseAPI,self.userToken,callBackPayDic[@"pay_order_id"]] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager GET:[NSString stringWithFormat:@"%@/v1/order/query?token=%@&order_id=%@",QTSDKDemoBaseAPI,self.userToken,callBackPayDic[@"pay_order_id"]] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [MBProgressHUD hideHUDForView:weakSelf.window animated:NO];
         QTLog(@"%@", responseObject);
         if ([responseObject[@"respcd"] isEqualToString:@"0000"]) {

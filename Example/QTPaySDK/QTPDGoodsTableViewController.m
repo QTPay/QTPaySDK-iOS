@@ -35,15 +35,14 @@
     AFHTTPRequestSerializer *serializer = [AFHTTPRequestSerializer serializer];
     [serializer setValue:@"t" forHTTPHeaderField:@"X-QT-ROUTE"];
     [manager setRequestSerializer:serializer];
+    manager.responseSerializer.acceptableContentTypes = nil;
     NSDictionary *requestDic = @{@"total_amt":[[self.amountArray objectAtIndex:indexPath.row] convertToFen],
                                  @"out_sn":[NSString generateTradeNO],
                                  @"goods_name":[self.goodsArray objectAtIndex:indexPath.row],
                                  @"token":self.userToken
                                  };
-    
-    [manager POST:[NSString stringWithFormat:@"%@/order/v1/simple_create", QTSDKDemoBaseAPI] parameters:requestDic success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager POST:[NSString stringWithFormat:@"%@/v1/order/simple_create", QTSDKDemoBaseAPI] parameters:requestDic success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [MBProgressHUD hideHUDForView:weakSelf.view animated:NO];
-        
         if (![responseObject[@"respcd"] isEqualToString:@"0000"]) {
             [UIAlertView showWithTitle:@"提示" message:responseObject[@"resperr"] cancelButtonTitle:@"确定" otherButtonTitles:nil tapBlock:nil];
             return ;
@@ -52,6 +51,7 @@
         [self sendRequestQPOSPaymentWithOrder:responseObject];
 
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [MBProgressHUD hideHUDForView:weakSelf.view animated:NO];
         [UIAlertView showWithTitle:@"提示" message:error.localizedDescription cancelButtonTitle:@"确定" otherButtonTitles:nil tapBlock:nil];
     }];
 
@@ -63,13 +63,14 @@
     NSString *orderCreate = orderInfo[@"data"][@"create_userid"];
     NSString *timestamp = [NSString stringWithFormat:@"%ld",time(NULL)];
     NSString *platform = @"2";
+    NSString *mobile = @"14700000291";
 
     NSDictionary *orderDic;
     NSString *qf_token = orderInfo[@"data"][@"qf_token"];
     if (qf_token) {
-        orderDic = @{@"pay_order_id":orderID,@"pay_order_create":orderCreate, @"platform":platform, @"scheme":scheme,@"qf_token":qf_token,@"timestamp":timestamp};
+        orderDic = @{@"pay_order_id":orderID,@"pay_order_create":orderCreate, @"platform":platform, @"scheme":scheme,@"qf_token":qf_token,@"timestamp":timestamp,@"mobile":mobile};
     }else{
-        orderDic = @{@"pay_order_id":orderID,@"pay_order_create":orderCreate, @"platform":platform, @"scheme":scheme,@"timestamp":timestamp};
+        orderDic = @{@"pay_order_id":orderID,@"pay_order_create":orderCreate, @"platform":platform, @"scheme":scheme,@"timestamp":timestamp,@"mobile":mobile};
     }
     
     NSString *requestURLString = [NSString stringWithFormat:@"qpos://%@",[self __packageGetURLParameters:orderDic]];
@@ -83,6 +84,7 @@
 }
 
 // create URL with sign
+// 参数添加sign签名（可选）
 - (NSString *)__packageGetURLParameters:(NSDictionary *)dic {
     NSMutableString *parametersString = [NSMutableString new];
     NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"description" ascending:YES selector:@selector(caseInsensitiveCompare:)];
