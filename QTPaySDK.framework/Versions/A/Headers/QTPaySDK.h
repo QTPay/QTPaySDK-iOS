@@ -37,7 +37,7 @@ typedef NS_ENUM (NSInteger, QTSDKModelType) {
 
 /**
  *	设置钱台SDK 环境（沙盒/正式）
- *
+ * 
  *  @model 设置环境
  *  默认：沙盒环境
  */

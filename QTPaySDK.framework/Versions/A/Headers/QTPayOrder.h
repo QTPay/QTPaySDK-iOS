@@ -12,7 +12,9 @@ typedef NS_ENUM (NSInteger, QTPayType) {
     QTPayTypeNone   = 0,       /**使用余额或优惠券抵扣支付金额*/
     QTPayTypeAliPay = 1,       /**使用支付宝支付*/
     QTPayTypeWeChat = 2,       /**使用微信支付*/
-    QTPayTypeOffline    = 4,   /**线下支付*/
+    QTPayTypeUnionPay = 3,     /**使用银联支付*/
+    QTPayTypeQPOSPay    = 4,   /**线下支付*/
+    QTPayTypeOffline    = 5,   /**线下支付*/
 };
 
 typedef NS_ENUM (NSInteger, QTActionType) {
