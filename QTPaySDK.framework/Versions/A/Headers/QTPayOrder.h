@@ -71,6 +71,11 @@ typedef void (^PayCompletionBlock)(QTRespCode resultCode, QTPayType PayType, NSD
  */
 @property (nonatomic, copy) NSString *goods_name;
 
+/** 必填
+ *	商品服务的个数
+ */
+@property (nonatomic, copy) NSString *goods_num;
+
 /** 选填
  *	商品或服务的描述
  */

@@ -46,6 +46,7 @@
         self.order.goods_name = @"大象套装";
         self.order.mobile     = [QTDemoUserInfo sharedInstance].mobile;
         self.order.mchnt_name = @"媚娘的店";
+        self.order.goods_num = [NSString stringWithFormat:@"%@",@(indexPath.row + 1)];
         
         __weak QTDemoGoodsListViewController *weakSelf = self;
         [MBProgressHUD showHUDAddedTo:self.view animated:NO];
