@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "QTPaySDK.h"
+#import <QTPaySDK/QTPaySDK.h>
 
 @implementation AppDelegate
 

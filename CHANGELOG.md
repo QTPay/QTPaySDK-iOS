@@ -1,6 +1,7 @@
 # version 1.0.6 - 2015-07-14
 ------------------------
-- fixes bug
+- bug fixes
+- package updates
 
 # version 1.0.5 - 2015-06-02
 ------------------------

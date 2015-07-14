@@ -8,7 +8,7 @@
 
 #import "QTDemoSettingListViewController.h"
 #import "QTDemoSettingViewCell.h"
-#import "QTPaySDK.h"
+#import <QTPaySDK/QTPaySDK.h>
 
 @interface QTDemoSettingListViewController ()<UITextFieldDelegate>
 @property (nonatomic,strong) NSArray *demoModelList;

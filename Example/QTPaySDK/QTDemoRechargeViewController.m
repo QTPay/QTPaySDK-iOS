@@ -7,7 +7,7 @@
 //
 
 #import "QTDemoRechargeViewController.h"
-#import "QTPaySDK.h"
+#import <QTPaySDK/QTPaySDK.h>
 #import "MBProgressHUD.h"
 
 @interface QTDemoRechargeViewController ()

@@ -9,8 +9,8 @@
 #import "QTDemoGoodsListViewController.h"
 #import "QTDemoGoodsDetailViewController.h"
 #import "QTDemoAccountViewController.h"
-#import "QTPayOrder.h"
-#import "QTPaySDK.h"
+#import <QTPaySDK/QTPayOrder.h>
+#import <QTPaySDK/QTPaySDK.h>
 #import "MBProgressHUD.h"
 
 @interface QTDemoGoodsListViewController ()

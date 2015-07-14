@@ -1,1 +1,0 @@
-../../../QTPaySDK_UI_All/PayChannels/AlipaySDK_2.0/AlipaySDK.framework/Headers/APayAuthInfo.h

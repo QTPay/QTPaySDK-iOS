@@ -9,8 +9,8 @@
 #import "QTDemoAccountViewController.h"
 #import "QTDemoCouponListViewController.h"
 #import "QTDemoRechargeViewController.h"
-#import "QTPayOrder.h"
-#import "QTPaySDK.h"
+#import <QTPaySDK/QTPayOrder.h>
+#import <QTPaySDK/QTPaySDK.h>
 
 
 @interface QTDemoAccountViewController ()

@@ -13,7 +13,7 @@
 		42181B6B1ABBC4F80083CA19 /* QTDemoSettingViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42181B691ABBC4F80083CA19 /* QTDemoSettingViewCell.xib */; };
 		42BE36D81AB81C93001FB6E2 /* QTDemoSettingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BE36D71AB81C93001FB6E2 /* QTDemoSettingListViewController.m */; };
 		42BE36DC1AB91F21001FB6E2 /* QTSDKDemoVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BE36DB1AB91F21001FB6E2 /* QTSDKDemoVariable.m */; };
-		5922018EF1D04D1B56048F63 /* libPods-QTPaySDK-Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6907811E6EB5A8F93621DFB9 /* libPods-QTPaySDK-Example.a */; };
+		4544C8436B812925CBF0AA80 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B94884BC76C953110ADE2A5 /* libPods-Tests.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -24,6 +24,7 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		B2B3ACFE9DAAFB4D0A683B42 /* libPods-QTPaySDK-Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6015F376759F2A32788D49 /* libPods-QTPaySDK-Example.a */; };
 		B50714791A83982A00CA1E77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B507146C1A83982A00CA1E77 /* AppDelegate.m */; };
 		B507147A1A83982A00CA1E77 /* QTDemoGoodsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B507146F1A83982A00CA1E77 /* QTDemoGoodsDetailViewController.m */; };
 		B507147B1A83982A00CA1E77 /* QTDemoGoodsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B50714711A83982A00CA1E77 /* QTDemoGoodsListViewController.m */; };
@@ -34,8 +35,17 @@
 		B507148E1A84B89100CA1E77 /* QTDemoAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B507148D1A84B89100CA1E77 /* QTDemoAccountViewController.m */; };
 		B50714911A84C32A00CA1E77 /* QTDemoCouponListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B50714901A84C32A00CA1E77 /* QTDemoCouponListViewController.m */; };
 		B50714941A84C3C000CA1E77 /* QTDemoUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B50714931A84C3C000CA1E77 /* QTDemoUserInfo.m */; };
+		B511C8B51B55153500E37194 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B511C8AF1B55153500E37194 /* AlipaySDK.bundle */; };
+		B511C8B61B55153500E37194 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B511C8B01B55153500E37194 /* AlipaySDK.framework */; };
+		B511C8B71B55153500E37194 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B511C8B11B55153500E37194 /* libcrypto.a */; };
+		B511C8B81B55153500E37194 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B511C8B21B55153500E37194 /* libssl.a */; };
+		B511C8B91B55153500E37194 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B511C8B41B55153500E37194 /* libWeChatSDK.a */; };
+		B511C8C91B55162E00E37194 /* QTPaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B511C8C81B55162E00E37194 /* QTPaySDK.framework */; };
+		B511C8CB1B55163800E37194 /* QTPaySDKResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B511C8CA1B55163800E37194 /* QTPaySDKResource.bundle */; };
+		B511C8CD1B55167700E37194 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B511C8CC1B55167700E37194 /* CFNetwork.framework */; };
+		B511C8CF1B55168400E37194 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B511C8CE1B55168400E37194 /* SystemConfiguration.framework */; };
+		B511C8D11B55168B00E37194 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B511C8D01B55168B00E37194 /* Security.framework */; };
 		B550B4281A77CCF1002D43A1 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B550B4191A77CAA6002D43A1 /* libc++.dylib */; };
-		E909CA02B442F87DD4FEB5B9 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE5262FB958B461D05E8F74 /* libPods-Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A6015F376759F2A32788D49 /* libPods-QTPaySDK-Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QTPaySDK-Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BB171F11ADD1AAF00EC58D0 /* QTPayFunctionExperienceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTPayFunctionExperienceViewController.h; sourceTree = "<group>"; };
 		3BB171F21ADD1AAF00EC58D0 /* QTPayFunctionExperienceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTPayFunctionExperienceViewController.m; sourceTree = "<group>"; };
 		3BB171F71ADD295700EC58D0 /* QTPDGoodsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTPDGoodsTableViewController.h; sourceTree = "<group>"; };
@@ -60,6 +71,7 @@
 		42BE36D71AB81C93001FB6E2 /* QTDemoSettingListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTDemoSettingListViewController.m; sourceTree = "<group>"; };
 		42BE36DA1AB91F21001FB6E2 /* QTSDKDemoVariable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTSDKDemoVariable.h; sourceTree = "<group>"; };
 		42BE36DB1AB91F21001FB6E2 /* QTSDKDemoVariable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTSDKDemoVariable.m; sourceTree = "<group>"; };
+		4B94884BC76C953110ADE2A5 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* QTPaySDK-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QTPaySDK-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -74,7 +86,6 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		6907811E6EB5A8F93621DFB9 /* libPods-QTPaySDK-Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QTPaySDK-Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F5D036742BF50CD7DEAD7DA /* Pods-QTPaySDK-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QTPaySDK-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-QTPaySDK-Example/Pods-QTPaySDK-Example.release.xcconfig"; sourceTree = "<group>"; };
 		7B12BCED0C187172B97D05FA /* Pods-QTPaySDK-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QTPaySDK-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QTPaySDK-Example/Pods-QTPaySDK-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		7C88A1CE870C56B45BD4BF6F /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,9 +112,18 @@
 		B50714901A84C32A00CA1E77 /* QTDemoCouponListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = QTDemoCouponListViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		B50714921A84C3C000CA1E77 /* QTDemoUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = QTDemoUserInfo.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		B50714931A84C3C000CA1E77 /* QTDemoUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = QTDemoUserInfo.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		B511C8AF1B55153500E37194 /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
+		B511C8B01B55153500E37194 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
+		B511C8B11B55153500E37194 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		B511C8B21B55153500E37194 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		B511C8B41B55153500E37194 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		B511C8C81B55162E00E37194 /* QTPaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTPaySDK.framework; path = ../QTPaySDK.framework; sourceTree = "<group>"; };
+		B511C8CA1B55163800E37194 /* QTPaySDKResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = QTPaySDKResource.bundle; path = ../QTPaySDK.framework/Versions/A/Resources/QTPaySDKResource.bundle; sourceTree = "<group>"; };
+		B511C8CC1B55167700E37194 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B511C8CE1B55168400E37194 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B511C8D01B55168B00E37194 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B550B4171A77CA9A002D43A1 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		B550B4191A77CAA6002D43A1 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
-		EBE5262FB958B461D05E8F74 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,11 +131,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B511C8D11B55168B00E37194 /* Security.framework in Frameworks */,
+				B511C8CF1B55168400E37194 /* SystemConfiguration.framework in Frameworks */,
+				B511C8CD1B55167700E37194 /* CFNetwork.framework in Frameworks */,
+				B511C8B81B55153500E37194 /* libssl.a in Frameworks */,
 				B550B4281A77CCF1002D43A1 /* libc++.dylib in Frameworks */,
+				B511C8B91B55153500E37194 /* libWeChatSDK.a in Frameworks */,
+				B511C8C91B55162E00E37194 /* QTPaySDK.framework in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				5922018EF1D04D1B56048F63 /* libPods-QTPaySDK-Example.a in Frameworks */,
+				B511C8B61B55153500E37194 /* AlipaySDK.framework in Frameworks */,
+				B511C8B71B55153500E37194 /* libcrypto.a in Frameworks */,
+				B2B3ACFE9DAAFB4D0A683B42 /* libPods-QTPaySDK-Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +153,7 @@
 			files = (
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				E909CA02B442F87DD4FEB5B9 /* libPods-Tests.a in Frameworks */,
+				4544C8436B812925CBF0AA80 /* libPods-Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +183,7 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
+				B511C8CA1B55163800E37194 /* QTPaySDKResource.bundle */,
 				6003F593195388D20070C39A /* QTPaySDKDemo */,
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
@@ -175,13 +204,17 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B511C8D01B55168B00E37194 /* Security.framework */,
+				B511C8CE1B55168400E37194 /* SystemConfiguration.framework */,
+				B511C8CC1B55167700E37194 /* CFNetwork.framework */,
+				B511C8C81B55162E00E37194 /* QTPaySDK.framework */,
 				B550B4191A77CAA6002D43A1 /* libc++.dylib */,
 				B550B4171A77CA9A002D43A1 /* libstdc++.dylib */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
-				6907811E6EB5A8F93621DFB9 /* libPods-QTPaySDK-Example.a */,
-				EBE5262FB958B461D05E8F74 /* libPods-Tests.a */,
+				2A6015F376759F2A32788D49 /* libPods-QTPaySDK-Example.a */,
+				4B94884BC76C953110ADE2A5 /* libPods-Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -189,6 +222,7 @@
 		6003F593195388D20070C39A /* QTPaySDKDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B511C8AD1B55153500E37194 /* PayChannels */,
 				3BB171F41ADD291300EC58D0 /* OfflinePOSPay */,
 				B50714861A83A03800CA1E77 /* WXApi.h */,
 				B50714871A83A03800CA1E77 /* WXApiObject.h */,
@@ -255,6 +289,35 @@
 				606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B511C8AD1B55153500E37194 /* PayChannels */ = {
+			isa = PBXGroup;
+			children = (
+				B511C8AE1B55153500E37194 /* AlipaySDK_2.0 */,
+				B511C8B31B55153500E37194 /* WeChatSDK_1.5 */,
+			);
+			name = PayChannels;
+			path = ../../PayChannels;
+			sourceTree = "<group>";
+		};
+		B511C8AE1B55153500E37194 /* AlipaySDK_2.0 */ = {
+			isa = PBXGroup;
+			children = (
+				B511C8AF1B55153500E37194 /* AlipaySDK.bundle */,
+				B511C8B01B55153500E37194 /* AlipaySDK.framework */,
+				B511C8B11B55153500E37194 /* libcrypto.a */,
+				B511C8B21B55153500E37194 /* libssl.a */,
+			);
+			path = AlipaySDK_2.0;
+			sourceTree = "<group>";
+		};
+		B511C8B31B55153500E37194 /* WeChatSDK_1.5 */ = {
+			isa = PBXGroup;
+			children = (
+				B511C8B41B55153500E37194 /* libWeChatSDK.a */,
+			);
+			path = WeChatSDK_1.5;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +405,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B511C8CB1B55163800E37194 /* QTPaySDKResource.bundle in Resources */,
+				B511C8B51B55153500E37194 /* AlipaySDK.bundle in Resources */,
 				42181B6B1ABBC4F80083CA19 /* QTDemoSettingViewCell.xib in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
@@ -579,12 +644,20 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Hangzhou Zheng (H4U5Z34JQ5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hangzhou Zheng (H4U5Z34JQ5)";
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/YoungShook/workspace/QTPaySDK-iOS/PayChannels/AlipaySDK_2.0",
+					"/Users/YoungShook/workspace/QTPaySDK-iOS",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QTPaySDK/QTPaySDK-Prefix.pch";
 				INFOPLIST_FILE = "QTPaySDK/QTPaySDK-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/YoungShook/workspace/QTPaySDK-iOS/PayChannels/AlipaySDK_2.0",
+					"/Users/YoungShook/workspace/QTPaySDK-iOS/PayChannels/WeChatSDK_1.5",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "f68497c8-7fed-42e6-a758-7c75e7ef828b";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -602,12 +675,20 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Qfpay Technology Company Limited";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Qfpay Technology Company Limited";
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/YoungShook/workspace/QTPaySDK-iOS/PayChannels/AlipaySDK_2.0",
+					"/Users/YoungShook/workspace/QTPaySDK-iOS",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QTPaySDK/QTPaySDK-Prefix.pch";
 				INFOPLIST_FILE = "QTPaySDK/QTPaySDK-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/YoungShook/workspace/QTPaySDK-iOS/PayChannels/AlipaySDK_2.0",
+					"/Users/YoungShook/workspace/QTPaySDK-iOS/PayChannels/WeChatSDK_1.5",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e0316ec2-1a54-4866-b623-588783d9ae6c";
 				TARGETED_DEVICE_FAMILY = 1;

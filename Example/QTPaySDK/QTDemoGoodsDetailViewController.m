@@ -8,8 +8,8 @@
 
 #import "QTDemoGoodsDetailViewController.h"
 #import "MBProgressHUD.h"
-#import "QTPayOrder.h"
-#import "QTPaySDK.h"
+#import <QTPaySDK/QTPayOrder.h>
+#import <QTPaySDK/QTPaySDK.h>
 #import "WXApi.h"
 
 @interface QTDemoGoodsDetailViewController ()<UIActionSheetDelegate>
