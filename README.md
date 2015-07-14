@@ -9,6 +9,8 @@
     pod 'QTPaySDK_UI_All'
 ```
 
+注：默认会自动安装支付宝和微信 SDK，若项目中已集成过装支付宝或微信 SDK，为避免重复引入，请手动集成。
+
 ### 1.2 手动下载SDK集成
 
 - 下载地址：
@@ -79,6 +81,7 @@
     prePayOrder.total_amt  = @"1000";
     prePayOrder.goods_info = @"包含基础护手,卸甲油胶,不含卸光疗延长甲.";
     prePayOrder.goods_name = @"武媚娘美甲基础套餐";
+    prePayOrder.goods_num = @"3";
     prePayOrder.mobile     = @"18888888888";
     prePayOrder.mchnt_name = @"武媚娘";
     prePayOrder.actionType = QTActionTypeGoods;
@@ -112,6 +115,22 @@
 					  NSDictionary *resultDic) {
 		// 处理回调返回的余额支付结果
     }];
+```
+
+* 接收回调
+
+在App中下面Delegate系统回调方法中调用 QTPaySDK 提供的API接口。
+
+ App系统回调方法：
+```objectivec
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url 
+sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;
+```
+
+调用 QTPaySDK 提供的接收方法：
+
+```objectivec
+- (void)processOrderWithPaymentResult:(NSURL *)resultUrl standbyCallback:(PayCompletionBlock)payCompletionBlock;
 ```
 
 ### 2.2 查询
@@ -219,31 +238,11 @@
 |qf_token|string|用户token，对应下单接口返回的qf_token字段|
 |scheme|string|iOS App的Scheme|
 |timestamp|string|发起请求的Unix时间戳|
-|sign|string|以上字段升序排列后加上`TransferKey`后算出的MD5值(32位大写)|
 
-### 参数组装 ###
-
-把请求参数组装成URL的形式。
-
-`reqString`(字段按升序排列) :
-```objectivec
-pay_order_create=HHIKO121233S&pay_order_id=MX5FG2129HFD&platform=2&qf_token=be7018a1f5c24c7281bcc317dc5543ed&scheme=appdemo&timestamp=1426497590
-```
-
-`TransferKey`:
-```objectivec
-qpos
-```
-
-`sign`(两个字符串相加后算出的MD5值)：
-```objectivec
-MD5（`reqString`+`TransferKey`）
-MD5（pay_order_create=HHIKO121233S&pay_order_id=MX5FG2129HFD&platform=2&qf_token=be7018a1f5c24c7281bcc317dc5543ed&scheme=appdemo&timestamp=1426497590qpos）
-```
 
 `url`：
 ```objectivec
-qpos://?pay_order_create=HHIKO121233S&pay_order_id=MX5FG2129HFD&platform=2&qf_token=be7018a1f5c24c7281bcc317dc5543ed&scheme=appdemo&timestamp=1426497590&sign=A9DFB264A534CAA16B0A581A9B0CA495
+qpos://?pay_order_create=HHIKO121233S&pay_order_id=MX5FG2129HFD&platform=2&qf_token=be7018a1f5c24c7281bcc317dc5543ed&scheme=appdemo&timestamp=1426497589
 ```
 
 ### 调用方式 ###
@@ -267,10 +266,10 @@ NSURL *url = [NSURL URLWithString:@"url"];
 
 ### 接收结果方式 ###
 
-在App中下面Delegate方法中接收`钱方商户`App返回的支付结果。
+在App中下面Delegate系统回调方法中接收`钱方商户`App返回的支付结果。
 
+ App系统回调方法：
 ```objectivec
-
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url 
 sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;
 ```
