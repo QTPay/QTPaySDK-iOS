@@ -85,6 +85,7 @@
     prePayOrder.mobile     = @"18888888888";
     prePayOrder.mchnt_name = @"武媚娘";
     prePayOrder.actionType = QTActionTypeGoods;
+    prePayOrder.goods_memo = @"媚娘的店，有你好看，年终大促，买3赠1.";
 ```
 
 * 获取用户账户信息（优惠券、余额、积分）

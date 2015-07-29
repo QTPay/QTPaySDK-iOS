@@ -47,6 +47,7 @@
         self.order.mobile     = [QTDemoUserInfo sharedInstance].mobile;
         self.order.mchnt_name = @"媚娘的店";
         self.order.goods_num = [NSString stringWithFormat:@"%@",@(indexPath.row + 1)];
+        self.order.goods_memo = @"媚娘的店，有你好看，年终大促，买3赠1.";
         
         __weak QTDemoGoodsListViewController *weakSelf = self;
         [MBProgressHUD showHUDAddedTo:self.view animated:NO];

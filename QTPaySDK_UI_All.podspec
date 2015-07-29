@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "QTPaySDK_UI_All"
-  s.version      = "1.0.6"
+  s.version      = "1.0.7"
   s.summary      = "QTPay iOS SDK, contains all pay channels and UI interface."
   s.description  = <<-DESC
     QTPay iOS SDK, contains all pay channels and UI interface.

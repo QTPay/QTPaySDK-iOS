@@ -76,11 +76,6 @@ typedef void (^PayCompletionBlock)(QTRespCode resultCode, QTPayType PayType, NSD
  */
 @property (nonatomic, copy) NSString *goods_num;
 
-/** 选填
- *	商品或服务的描述
- */
-@property (nonatomic, copy) NSString *goods_info;
-
 /** 必填
  *	商品或服务的总金额(优惠前) 单位分
  */
@@ -92,14 +87,24 @@ typedef void (^PayCompletionBlock)(QTRespCode resultCode, QTPayType PayType, NSD
 @property (nonatomic, copy) NSString *pay_amt;
 
 /** 必填
- *	消费者的手机号
- */
-@property (nonatomic, copy) NSString *mobile;
-
-/** 必填
  *	预下单orderToken
  */
 @property (nonatomic, copy) NSString *order_token;
+
+/** 选填
+ *	商品或服务的描述
+ */
+@property (nonatomic, copy) NSString *goods_info;
+
+/** 选填
+ *  商品备注信息
+ */
+@property (nonatomic, copy) NSString *goods_memo;
+
+/** 选填
+ *	消费者的手机号
+ */
+@property (nonatomic, copy) NSString *mobile;
 
 /** 选填
  *	使用优惠券的Code
