@@ -67,6 +67,11 @@ typedef void (^PayCompletionBlock)(QTRespCode resultCode, QTPayType PayType, NSD
 @property (nonatomic, copy) NSString *out_sn;
 
 /** 必填
+ *	预下单orderToken
+ */
+@property (nonatomic, copy) NSString *order_token;
+
+/** 必填
  *	商品服务的名称
  */
 @property (nonatomic, copy) NSString *goods_name;
@@ -85,11 +90,6 @@ typedef void (^PayCompletionBlock)(QTRespCode resultCode, QTPayType PayType, NSD
  *	用户实际需要支付的金额(优惠后) 单位分
  */
 @property (nonatomic, copy) NSString *pay_amt;
-
-/** 必填
- *	预下单orderToken
- */
-@property (nonatomic, copy) NSString *order_token;
 
 /** 选填
  *	商品或服务的描述
